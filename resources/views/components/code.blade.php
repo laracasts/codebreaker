@@ -4,7 +4,7 @@
 ])
 
 <div {{ $attributes->class(['text-center flex flex-wrap gap-8 mt-auto']) }}>
-    @foreach(explode(' ', $message) as $word)
+    @foreach(explode(' ', trim($message)) as $word)
         <div class="word flex flex-wrap gap-2">
             @foreach(str_split($word) as $character)
                 <div>
