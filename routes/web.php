@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $rtl = isset($_GET['rtl']) && $_GET['rtl'] === 'true';
+    return view('welcome', compact('rtl'));
 });
