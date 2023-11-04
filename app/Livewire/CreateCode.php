@@ -173,11 +173,25 @@ class CreateCode extends Component
             'wb_sunny'
         ];
 
-        return Arr::random($symbols, count($this->getAlphabets()));
+        return $this->generateRandomUniqueArray($symbols, count($this->getAlphabets()));
     }
 
     public function toggleDirection(): bool
     {
         return !$this->rtl;
+    }
+
+    public function generateRandomUniqueArray($symbols, $length): array
+    {
+        $randomSymbols = [];
+
+        while (count($randomSymbols) < $length) {
+            $randomItem = Arr::random($symbols);
+            if (!in_array($randomItem, $randomSymbols)) {
+                $randomSymbols[] = $randomItem;
+            }
+        }
+
+        return $randomSymbols;
     }
 }

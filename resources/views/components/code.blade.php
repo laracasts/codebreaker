@@ -6,7 +6,7 @@
 
 <div {{ $attributes->class(['text-center flex flex-wrap gap-8 mt-auto']) }}>
     @foreach (array_filter(explode(' ', trim($message))) as $word)
-        <div class="word flex flex-wrap gap-2">
+        <div class="word flex flex-wrap gap-2 flex-row-reverse">
             @php
                 $characters = $rtl ? array_reverse(preg_split('//u', $word, -1, PREG_SPLIT_NO_EMPTY)) : str_split($word);
             @endphp
