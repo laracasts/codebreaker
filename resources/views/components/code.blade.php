@@ -9,7 +9,7 @@
             @foreach(mb_str_split($word) as $character)
                 <div>
                      <span class="material-symbols-outlined character !text-4xl">
-                        {{ $letters[strtolower($character)] ?? $character }}
+                        {{ $letters[mb_strtolower($character)] ?? $character }}
                     </span>
 
                     <div class="bg-gray-200 w-12 h-12"></div>
