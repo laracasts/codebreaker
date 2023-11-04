@@ -11,6 +11,6 @@
     <x-code :message="$message" :letters="$this->letters"/>
 
     @if ($message)
-        <x-legend :letters="$this->letters" />
+        <x-legend :letters="$this->legendLetters($message)" />
     @endif
 </div>
