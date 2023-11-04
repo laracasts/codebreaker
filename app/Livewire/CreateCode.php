@@ -71,6 +71,7 @@ class CreateCode extends Component
         $urdu = ['ڈ', 'ڑ', 'ں', 'ھ', 'ہ'];
         $pashto = ['ټ', 'ځ', 'څ', 'ډ', 'ړ', 'ږ', 'ښ', 'ګ', 'ڼ', 'ء', 'ې', 'ۍ', 'ي', 'ې', 'ۍ'];
         $miscellaneous = ['ی', 'ک', 'ئ', 'ة', 'ؤ', 'أ', 'آ',];
+
         return $this->rtl ? array_unique(array_merge($arabic, $farsi, $urdu, $pashto, $miscellaneous)) : $english;
     }
 
