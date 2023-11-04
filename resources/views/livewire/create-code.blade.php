@@ -8,7 +8,7 @@
         </div>
     </form>
 
-    <x-code :message="$message" :letters="$this->letters"/>
+    <x-code :message="$message" :letters="$this->letters" :rtl="$rtl" />
 
     @if ($message)
         <x-legend :letters="$this->letters" />
