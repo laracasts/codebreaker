@@ -36,6 +36,11 @@ class CreateCode extends Component
         'tools_power_drill',
         'nest_eco_leaf',
         'air_freshener',
+        'favorite',
+        'bolt',
+        'key',
+        'sunny',
+
     ];
 
     #[Computed(persist: true)]
@@ -43,7 +48,7 @@ class CreateCode extends Component
     {
         shuffle($this->symbols);
 
-        return collect(range('a', 'z'))
+        return collect([...range('a', 'z'), ...['ö', 'ä', 'ü', "ß"]])
             ->combine($this->symbols)
             ->toArray();
     }
