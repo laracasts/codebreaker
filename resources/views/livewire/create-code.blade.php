@@ -6,8 +6,8 @@
         <div class="mt-2 flex space-x-2 justify-end">
             <button type="button"
                     wire:click="clearMessage"
-                    class="bg-blue-500 px-4 py-1 text-sm font-semibold rounded-md disabled:bg-gray-300"
-            >Clear
+                    class="bg-red-400 px-4 py-1 text-sm font-semibold rounded-md disabled:bg-gray-300"
+            >Clear Form
             </button>
 
             <button type="button" @disabled(! $message) @click="window.print()"
