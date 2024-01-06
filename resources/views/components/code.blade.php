@@ -12,11 +12,12 @@
                         {{ $letters[strtolower($character)] ?? $character }}
                     </span>
 
-                    <div class="
-                    @if(preg_match("/[a-z]/i", $character))
-                        bg-gray-200
-                    @endif
-                         w-12 h-12"></div>
+                    <div 
+                        @class([
+                            'w-12 h-12',
+                            'bg-gray-200' => preg_match("/[a-z]/i", $character),
+                        ])
+                    ></div>
                 </div>
             @endforeach
         </div>
