@@ -4,6 +4,10 @@
                   class="bg-white/10 text-white py-2 px-3 rounded-xl w-full"></textarea>
 
         <div class="mt-2 flex justify-end">
+            <div class="flex items-center mr-3">
+                <input type="checkbox" wire:model.live="includeLegend" class="mr-2 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-600 ring-offset-gray-800 focus:ring-2" @disabled(! $message)>
+                <label for="includeLegend">Include Legend</label>
+            </div>
             <button type="button" @disabled(! $message) @click="window.print()" class="bg-blue-500 px-4 py-1 text-sm font-semibold rounded-md disabled:bg-gray-300">Print</button>
         </div>
     </form>
@@ -11,6 +15,6 @@
     <x-code :message="$message" :letters="$this->letters"/>
 
     @if ($message)
-        <x-legend :letters="$this->letters" />
+        <x-legend :letters="$this->letters" :includeLegend="$includeLegend" />
     @endif
 </div>

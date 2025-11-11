@@ -7,6 +7,8 @@ use Livewire\Component;
 
 class CreateCode extends Component
 {
+    public bool $includeLegend = true;
+
     public string $message;
 
     protected array $symbols = [
