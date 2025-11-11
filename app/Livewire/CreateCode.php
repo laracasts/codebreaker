@@ -52,4 +52,9 @@ class CreateCode extends Component
     {
         return view('livewire.create-code');
     }
+
+    public function clearMessage()
+    {
+        $this->reset('message');
+    }
 }
